@@ -59,6 +59,7 @@ public class Vector {
      * @return скалярное произведение
      */
     public double scalarMulti(Vector vector2) {
+
         return this.x * vector2.x + this.y * vector2.y + this.z * vector2.z;
     }
 
@@ -79,6 +80,25 @@ public class Vector {
      * @return косинус угла
      */
     public double cosVector(Vector vector2) {
+
         return scalarMulti(vector2)/(lengthVector()*vector2.lengthVector());
+    }
+
+    /**
+     *
+     * @param vector2 второй вектор для сложения
+     * @return сумма векторов
+     */
+    public Vector sumVector(Vector vector2) {
+        return new Vector(this.x+vector2.x, this.y+vector2.y, this.z+vector2.z);
+    }
+
+    /**
+     *
+     * @param vector2 второй вектор для вычитания
+     * @return разность векторов
+     */
+    public Vector difVector(Vector vector2) {
+        return new Vector(this.x-vector2.x, this.y-vector2.y, this.z-vector2.z);
     }
 }

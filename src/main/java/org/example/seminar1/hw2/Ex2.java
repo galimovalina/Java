@@ -1,5 +1,5 @@
 
-package org.example.hw2;
+package org.example.seminar1.hw2;
 
 import java.util.Scanner;
 
