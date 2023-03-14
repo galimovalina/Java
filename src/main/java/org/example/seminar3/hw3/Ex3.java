@@ -29,12 +29,16 @@ public class Ex3 {
 
 
         for (Book book : listBook) {
-            if (isPrime(book.getPages()) && book.getAuthor().toLowerCase().contains("а") && book.getYear()>=2010) {
+            if (isPrime(book.getPages()) && book.getAuthor().toLowerCase().contains("а") && book.getYear() >= 2010) {
                 System.out.println(book.getName());
             }
         }
     }
 
+    /**
+     * @param pages число страниц
+     * @return является ли количество страниц простым числом
+     */
     private static boolean isPrime(int pages) {
         if (pages < 2) {
             return false;

@@ -10,12 +10,12 @@ import java.util.List;
  */
 public class Ex1 {
     public static void main(String[] args) {
-        Product product1=new Product("высший огурец", 35, 1);
-        Product product2=new Product("апельсин", 50, 3);
-        Product product3=new Product("высший помидор", 45, 2);
-        Product product4=new Product("банан", 20, 3);
+        Product product1 = new Product("высший огурец", 35, 1);
+        Product product2 = new Product("апельсин", 50, 3);
+        Product product3 = new Product("высший помидор", 45, 2);
+        Product product4 = new Product("банан", 20, 3);
 
-        List<Product> listProduct=new ArrayList<>();
+        List<Product> listProduct = new ArrayList<>();
         listProduct.add(product1);
         listProduct.add(product2);
         listProduct.add(product3);
@@ -23,9 +23,9 @@ public class Ex1 {
 
         List<Integer> prices = new ArrayList<>();
 
-        for (Product product: listProduct){
-            if (product.getSort()==1 || product.getSort()==2){
-                if (product.getName().contains("высший")){
+        for (Product product : listProduct) {
+            if (product.getSort() == 1 || product.getSort() == 2) {
+                if (product.getName().contains("высший")) {
                     prices.add(product.getPrice());
                 }
             }
@@ -35,15 +35,14 @@ public class Ex1 {
     }
 
     /**
-     *
      * @param prices коллекция цен на товары
      * @return максимальная цена
      */
     private static Integer MaxPrice(List<Integer> prices) {
-        int max=0;
+        int max = 0;
         for (int i = 0; i < prices.size(); i++) {
-            if (prices.get(i) >max){
-                max=prices.get(i);
+            if (prices.get(i) > max) {
+                max = prices.get(i);
             }
         }
         return max;
