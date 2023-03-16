@@ -1,25 +1,19 @@
 package org.example.seminar4.hw1;
 
+import java.util.Arrays;
+import java.util.LinkedList;
+
+/**
+ * Вывести список на экран в перевернутом виде (без массивов и ArrayList)
+ */
 public class Ex1 {
-//    * public class ListNode {
-//* int val;
-//* ListNode next;
-//* ListNode() {}
-//* ListNode(int val) { this.val = val; }
-//* ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-//* }
-//*/
-//    class Solution {
-//        public ListNode reverseList(ListNode head) {
-//            ListNode pred = null;
-//            ListNode current = head;
-//            while(current != null){
-//                ListNode nextElem = current.next;
-//                current.next = pred;
-//                pred=current;
-//                current=nextElem;
-//            }
-//            return pred;
-//        }
-//    }
+    public static void main(String[] args) {
+        LinkedList<Integer> somelist = new LinkedList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
+        LinkedList<Integer> resultlist = new LinkedList<>();
+        for (int i = somelist.size() - 1; i >= 0; i--) {
+            resultlist.add(somelist.get(i));
+
+        }
+        System.out.println(resultlist);
+    }
 }
