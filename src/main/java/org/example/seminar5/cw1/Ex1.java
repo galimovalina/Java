@@ -21,7 +21,7 @@ public class Ex1 {
 //            }
         }
         for(var entry:mapCh.entrySet()){
-            System.out.println(entry.getKey()+" стретился - "+entry.getValue()+" раз");
+            System.out.println(entry.getKey()+" встретился - "+entry.getValue()+" раз");
         }
     }
 }
